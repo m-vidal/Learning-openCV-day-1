@@ -12,3 +12,10 @@ def load_model():
     return (net)
 
 net = load_model()
+
+st.title("Face Detector")
+st.write("ResNet Model + SSD — OpenCV v3.3")
+frame = st.camera_input("Camera")
+
+if (frame is not None):
+    st.image(frame, "Your Photo!")

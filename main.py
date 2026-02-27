@@ -6,8 +6,8 @@ from PIL import Image
 @st.cache_resource
 def load_model():
     net = cv2.dnn.readNetFromCaffe(
-        "model/deploy.prototxt",
-        "model/res10_300x300_ssd_iter_140000.caffemodel"
+        "models/deploy.prototxt",
+        "models/res10_300x300_ssd_iter_140000.caffemodel"
     )
     return (net)
 
@@ -17,5 +17,7 @@ st.title("Face Detector")
 st.write("ResNet Model + SSD — OpenCV v3.3")
 frame = st.camera_input("Camera")
 
-if (frame is not None):
-    st.image(frame, "Your Photo!")
+if frame is not None:
+    image_pil = Image.open(frame)
+    frame = cv2.cvtColor(np.array(image_pil), cv2.COLOR_RGB2BGR)
+    st.image(frame)

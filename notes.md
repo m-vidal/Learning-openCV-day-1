@@ -22,3 +22,11 @@ caminhos a aprendizagem deve tomar, o que fazer com os dados colhidos, etc).
 Man... A opencv-python normal precisa de bibliotecas gráficas do sistema (libGL)
 mas ela não existe em Codespaces (pq é um server sem ecrã), por isso precisamos
 usar uma versão da OpenCV que foi pensada para este exato contexto: opencv-python-headless
+
+streamlit: pega o código python e converte em uma webpage, existem muitos comandos
+simples para cirar elementos na pégina... como:
+    .title(""), que coloca uma especie cabeçalho H1 de HTML
+    .write(""), que coloca um parágrafo
+    .slider("s", 0, 100), gera um slime com o nome do first arg e um range do second to last arg
+    .image(frame), display the first arg image an a label (optional second arg)
+    .camera_input("Camera"), adivinhe o resto :)

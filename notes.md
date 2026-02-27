@@ -15,5 +15,10 @@ ela precisa estar sobre um determinado padrão. Uma especie de conversão
 redimensionar para o tamanho esperado/aceite pela rede e reorganizar os
 canais... Para isso a **OpenCV** tem cv2.dnn.blobFromImage().
 
-Redes neurais possuem os chamados de Pessos (conhecimento adquirido ao longo do tempo) e Arquitetura (geralmente um ficheiro de texto que descreve quais caminhos a aprendizagem deve tomar, o que fazer com os dados colhidos, etc).
+Redes neurais possuem os chamados de Pessos (conhecimento adquirido ao longo
+do tempo) e Arquitetura (geralmente um ficheiro de texto que descreve quais
+caminhos a aprendizagem deve tomar, o que fazer com os dados colhidos, etc).
 
+Man... A opencv-python normal precisa de bibliotecas gráficas do sistema (libGL)
+mas ela não existe em Codespaces (pq é um server sem ecrã), por isso precisamos
+usar uma versão da OpenCV que foi pensada para este exato contexto: opencv-python-headless
